@@ -20,21 +20,24 @@ public class TestPicture17
   {
       //opens picture using a dialog box
       /**/
-     String fileName = FileChooser.pickAFile();
-     Picture pictObj = new Picture(fileName);
-     pictObj.explore();
+     //String fileName = FileChooser.pickAFile();
+     //Picture pictObj = new Picture(fileName);
+     //pictObj.explore();
 
      //opens a pictue using a path
      //Picture apic = new Picture("C:\\Users\\khayes\\Favorites\\Documents\APCS- Java\chap03\Curriclum 2013\Picture Color labs\images\\beach.jpg");
      
-     //relative path
+     //Picture loads allof the pixels into an array using a relative path
      Picture apic = new Picture("images\\beach.jpg");
      Picture ferris1 = new Picture("images/2000 ferris wheel2.jpg");
      Picture ferris2 = new Picture("images/2000 ferris wheel2.jpg");
      Picture ferris3 = new Picture("images/2000 ferris wheel2.jpg");
+     Picture somepic = new Picture("images/robot.jpg");
 
      //apic.explore();
-     ferris1.explore();
+     ferris1.explore(); //SOP for pictures
+     somepic.explore();
+     
      
      //makes an array of pixels
      Pixel[] pixels;
@@ -47,12 +50,22 @@ public class TestPicture17
 
     /**/
         //access each index
-    System.out.println(pixels[17]);
-    //access each pixel
-    Pixel spot = ferris1.getPixel(100,100);
+    System.out.println("Pixel 17: " + pixels[17]);
+    pixels[17].setColor(Color.red); //make a change
+    ferris1.explore();
     
-    System.out.println(pixels[17].getColor());
+    //access each pixel by picture
+    Pixel spot = ferris1.getPixel(100,100);
+    Pixel spot2 = ferris1.getPixel(50,50);
+    
+    spot.setColor(new Color(255,99,71));
+    spot2.setColor(new Color(225,0,0));
+    
+    System.out.println();
     System.out.println(spot);
+    
+    ferris1.explore();
+    ferris2.explore();
 /*
     pixels[17].setColor(Color.blue);
     spot.setColor(new Color(252,252,252));
@@ -75,12 +88,15 @@ public class TestPicture17
   * @param none
   * @return none
   */
- /*
-    for (Pixel pixelObj : pixels)
+ /**/
+ int count = 0;
+ 
+    for (Pixel spot3 : pixels)
         {
             //set the red value of the current pixel to the new value
-           
-
+            if (count%10 == 0)
+                spot3.setColor(Color.green);
+            count ++;
         }
     ferris1.explore();
     
@@ -91,7 +107,7 @@ public class TestPicture17
   * @return none
   */
 
-/*
+/**
 int value;
 final double  FACTOR = .5;
     for (Pixel pixelObj : pixels)
