@@ -36,7 +36,7 @@ public class TestPicture17
 
      //apic.explore();
      ferris1.explore(); //SOP for pictures
-     somepic.explore();
+     //somepic.explore();
      
      
      //makes an array of pixels
@@ -52,7 +52,7 @@ public class TestPicture17
         //access each index
     System.out.println("Pixel 17: " + pixels[17]);
     pixels[17].setColor(Color.red); //make a change
-    ferris1.explore();
+    //ferris1.explore();
     
     //access each pixel by picture
     Pixel spot = ferris1.getPixel(100,100);
@@ -64,8 +64,8 @@ public class TestPicture17
     System.out.println();
     System.out.println(spot);
     
-    ferris1.explore();
-    ferris2.explore();
+    //ferris1.explore();
+    //ferris2.explore();
 /*
     pixels[17].setColor(Color.blue);
     spot.setColor(new Color(252,252,252));
@@ -91,15 +91,41 @@ public class TestPicture17
  /**/
  int count = 0;
  
+
+ 
     for (Pixel spot3 : pixels)
         {
             //set the red value of the current pixel to the new value
-            if (count%10 == 0)
-                spot3.setColor(Color.green);
+            //if (count%10 == 0)
+            //    spot3.setColor(Color.green);
+            int r = spot3.getRed();
+            spot3.setRed(r*2);
+            
+            int g = spot3.getGreen();
+            spot3.setGreen(g/5);
             count ++;
+            
+            int b = spot3.getBlue(0);
+            spot3.setBlue((int)(b*Math.random()*1));
         }
-    ferris1.explore();
+    //ferris1.explore();
     
+    ferris2.explore();
+    pixels = ferris2.getPixels();
+    for (Pixel spot4: pixels)
+    {
+        int r = spot4.getRed();
+        int g = spot4.getGreen();
+        int b = spot4.getBlue();
+        
+        if (r < 5 && g < 5 && b < 5)
+           {
+               r = 200;
+               b = 255;
+               g = 200;
+           }
+    }
+    ferris2.explore();
 /**/
  /**
   * Method to reduce red from picture by a factor of n
