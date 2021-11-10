@@ -20,7 +20,7 @@ public class grayscale
         * Gray a rgb value all the same
         * what value would u set to all rgb
         */
-       ferris1.explore();
+       apic.explore();
        for (Pixel apix: markspixs)
        {
            int r = apix.getRed();
@@ -32,6 +32,6 @@ public class grayscale
            apix.setColor(new Color(avg, avg, avg));
         }   
         
-        ferris1.explore();
+        apic.explore();
     }
 }
