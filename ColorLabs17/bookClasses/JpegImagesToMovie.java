@@ -1,3 +1,5 @@
+package bookClasses;
+
 /*
  * @(#)JpegImagesToMovie.java 1.3 01/03/13
  *
