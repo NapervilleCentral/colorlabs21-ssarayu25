@@ -24,6 +24,8 @@ public class SheparFaireyLab
          Picture me1 = new Picture("images/selfie.jpg");
          Picture me2 = new Picture("images/selfie.jpg");
          
+         me.explore();
+         
          /**
           * method 1 change 
           * This method uses all four colors in equal amounts. This is easily done by dividing the sorted list of pixels values into four 
@@ -54,6 +56,7 @@ public class SheparFaireyLab
         }
         
         me.explore();
+        me.write("images/selfieedit1.jpg");
          
          /**
           * method 2 change
@@ -102,6 +105,7 @@ public class SheparFaireyLab
         }
         
         me1.explore();
+        me1.write("images/selfieedit2.jpg");
          
          /**
           * custom color palette
@@ -145,7 +149,7 @@ public class SheparFaireyLab
         }
         
         me2.explore();
-
+        me2.write("images/selfieedit3.jpg");
          
     }//main       
 }//class
