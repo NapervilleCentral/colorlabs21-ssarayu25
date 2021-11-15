@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ColorLab
-comment0.text=\n\ Write\ a\ description\ of\ class\ colorlab\ here.\n\n\ sarayu\ suresh\n\ 11/10/21\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ colorlab\ here.\r\n\r\n\ sarayu\ suresh\r\n\ 11/10/21\r\n
 comment1.params=fileName
 comment1.target=ColorLab(java.lang.String)
 comment10.params=

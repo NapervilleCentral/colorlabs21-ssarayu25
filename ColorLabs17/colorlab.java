@@ -15,6 +15,7 @@ public class ColorLab
         apic = new Picture(fileName);
     }
     
+    //sets the blue value to 255 for all pixels
     public void maxBlue()
     {
         Pixel[] pixels = apic.getPixels();
@@ -29,6 +30,7 @@ public class ColorLab
 
     } 
     
+    //sets the red value to 255 for all pixels
     public void maxRed()
     {
         Pixel[] pixels = apic.getPixels();
@@ -42,6 +44,7 @@ public class ColorLab
         
     }
     
+    //sets the green value to 255 for all pixels
     public void maxGreen()
     {
 
@@ -56,6 +59,7 @@ public class ColorLab
         
     }
     
+    //changes the picture to a negative, every value is the opposite (0 is 255, 1 is 254, 2 is 253 and so on)
     public void negate()
     {
         Pixel[] pixels = apic.getPixels();
@@ -76,6 +80,7 @@ public class ColorLab
         apic.explore();
     }
     
+    //changes the red value by the factor given test at: 50% = .5, 150% = 1.5, 25% = .25
     public void adjustRed(double factor)
     {
         Pixel[] pixels = apic.getPixels();
@@ -89,6 +94,7 @@ public class ColorLab
         apic.explore();
     }
     
+    //changes the green value by the factor given test at: 50% = .5, 150% = 1.5, 25% = .25
     public void adjustGreen(double factor)
     {
         Pixel[] pixels = apic.getPixels();
@@ -102,6 +108,7 @@ public class ColorLab
         apic.explore();
     }
     
+    //changes the blue value by the factor given test at: blue 50% = .5, blue 150% = 1.5, blue 25% = .25
     public void adjustBlue(double factor)
     {
         Pixel[] pixels = apic.getPixels();
@@ -115,6 +122,9 @@ public class ColorLab
         apic.explore();
     }
     
+    //convert picture to grayscale (where all values of RGB are the same)
+    // what would you do to make 3 different numbers values about the 
+   
     public void grayScale()
     {
         Pixel[] pixels = apic.getPixels();
@@ -133,6 +143,8 @@ public class ColorLab
         apic.explore();
     }
     
+    
+    //lightens by increasing each rgb value by 50
     public void lighten()
     {
         Pixel[] pixels = apic.getPixels();
@@ -152,6 +164,7 @@ public class ColorLab
         apic.explore();
     }
     
+    //darkens image by each decreasing rgb value by 50
     public void darken()
     {
         Pixel[] pixels = apic.getPixels();
@@ -171,6 +184,7 @@ public class ColorLab
         apic.explore();
     }
     
+    //changes the color of each pixel in the picture object by amounts entered
     public void changeColors(double redAmount, double greenAmount, double blueAmount)
     {
         Pixel[] pixels = apic.getPixels();
@@ -190,6 +204,7 @@ public class ColorLab
         apic.explore();
     }
     
+    //algorithm to make your face blue
     public void blueify()
     {
         Pixel[] pixels = apic.getPixels();
@@ -208,7 +223,7 @@ public class ColorLab
         
         apic.explore();
     }
-    
+     //makes hair red
     public void colorify()
     {
         Pixel[] pixels = apic.getPixels();        
@@ -228,6 +243,8 @@ public class ColorLab
         apic.explore();
     }
     
+    
+    //swaps red and green value
     public void swap2()
     {
         Pixel[] pixels = apic.getPixels();        
@@ -245,6 +262,7 @@ public class ColorLab
         apic.explore();
     }
     
+    //swap3 colors – swap all three red = green, green = blue, blue = red
     public void swap3()
     {
         Pixel[] pixels = apic.getPixels();        

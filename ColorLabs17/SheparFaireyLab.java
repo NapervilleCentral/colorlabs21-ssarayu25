@@ -56,7 +56,7 @@ public class SheparFaireyLab
         }
         
         me.explore();
-        me.write("images/selfieedit1.jpg");
+        //me.write("images/selfieedit1.jpg");
          
          /**
           * method 2 change
@@ -94,22 +94,22 @@ public class SheparFaireyLab
         {
            int r = spot.getRed(); //all are equal only need to grab one
            
-           if (r < (small + rangesize))
+           if (r <= (small + rangesize))
                spot.setColor(new Color(10,42,63));
-           else if (r < (small + (rangesize*2)))
+           else if (r <= (small + (rangesize*2)))
                spot.setColor(new Color(219,21,34));
-           else if (r < (small + (rangesize*3)))
+           else if (r <= (small + (rangesize*3)))
                spot.setColor(new Color(101,147,160));
-           else if (r < big)
+           else if (r <= big)
                spot.setColor(new Color(255,239,167));
         }
         
         me1.explore();
-        me1.write("images/selfieedit2.jpg");
+        //me1.write("images/selfieedit2.jpg");
          
          /**
           * custom color palette
-          * Choose your own  4 color palette (dark brown, tan, green, yellow) and convert your picture. 
+          * Choose your own  4 color palette 
           */
          Pixel[] pixels2 = me2.getPixels();
         
@@ -138,14 +138,14 @@ public class SheparFaireyLab
         {
            int r = spot.getRed(); //all are equal only need to grab one
            
-           if (r < (small1 + rangesize1))
-               spot.setColor(new Color(55,2,86));
-           else if (r < (small1 + (rangesize1*2)))
-               spot.setColor(new Color(33,31,145));
-           else if (r < (small1 + (rangesize1*3)))
-               spot.setColor(new Color(208,161,16));
-           else if (r < big1)
-               spot.setColor(new Color(255,254,175));
+           if (r <= (small1 + rangesize1))
+               spot.setColor(new Color(75,0,130)); //indigo
+           else if (r <= (small1 + (rangesize1*2)))
+               spot.setColor(new Color(148,0,211)); //dark violet
+           else if (r <= (small1 + (rangesize1*3)))
+               spot.setColor(new Color(147,112,219)); //medium purple
+           else if (r <= big1)
+               spot.setColor(new Color(230,230,250)); //lavender
         }
         
         me2.explore();
