@@ -1,3 +1,6 @@
+import java.awt.*;
+import java.util.*;
+import java.util.List;
 /**
  * Write a description of class filter here.
  *
@@ -6,22 +9,15 @@
  */
 public class filter
 {
-    /**
-     * Constructor for objects of class filter
-     */
-    public filter()
-    {
-        
-    }
-    
+ 
     public static void main  (String args [])
     {
         Picture pic = new Picture("images\\og.jpg");
-        blue(pic);
+        mirrorHorizontal(pic);
         pic.explore();
     }
     
-    public static void blue(Picture pic)
+    public static void addBlue(Picture pic)
     {
           int width; int height;
           Pixel spot;
@@ -32,14 +28,75 @@ public class filter
               for (int c = 0; c < h; c++)
               {
                   spot = pic.getPixel(r, c);
-                  spot.setRed(spot.getRed() - 40);
-                  spot.setBlue(spot.getBlue() + 40);
-                  
+                  spot.setRed(spot.getRed() - 100);
+                  spot.setBlue(spot.getBlue() + 100);
                 }
             }
     }
     
+    public static void grayScale(Picture pic)
+    {
+        
+        Pixel[] markspixs = pic.getPixels();
+       
+       for (Pixel apix: markspixs)
+       {
+           int r = apix.getRed();
+           int g = apix.getGreen();
+           int b = apix.getBlue();
+           
+           int avg = (int) (r + g + b)/3;
+           
+           apix.setColor(new Color(avg, avg, avg));
+        }   
+        
+    }
     
+    public static void sepiaTone(Picture pic)
+    {
+       grayScale(pic);
+        Pixel[] markspixs = pic.getPixels();
+       
+       for (Pixel apix: markspixs)
+       {
+           int r = apix.getRed();
+           if (r < 63)
+           {
+               apix.setRed((int) (r * 1.1));
+               apix.setBlue((int) (r * 0.9));
+            }
+           else if (r < 192)
+           {
+               apix.setRed((int) (r * 1.15));
+               apix.setBlue((int) (r * 0.85));
+            }
+           else 
+           {
+               apix.setRed((int) (r * 1.08));
+               apix.setBlue((int) (r * 0.93));
+            }
+           
+           
+        }   
+    }
+    
+    public static void mirrorHorizontal(Picture mypic)
+    {
+      int width; int height;
+      Pixel up;
+      Pixel down;
+      int h = mypic.getHeight() - 1;
+      int w = mypic.getWidth() - 1;
+      for (int r = 0; r < w/2; r++)
+      {
+          for (int c = 0; c < h; c++)
+          {
+              up = mypic.getPixel(r , c);
+              down = mypic.getPixel (r, h - c );
+              down.setColor(up.getColor());
+            }
+        }
+     }
 }
 
     

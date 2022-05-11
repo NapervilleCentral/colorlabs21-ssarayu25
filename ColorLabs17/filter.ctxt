@@ -1,11 +1,14 @@
 #BlueJ class context
 comment0.target=filter
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ filter\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=filter()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ filter\r\n
-comment2.params=args
-comment2.target=void\ main(java.lang.String[])
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=pic
+comment2.target=void\ addBlue(Picture)
 comment3.params=pic
-comment3.target=void\ blue(Picture)
-numComments=4
+comment3.target=void\ grayScale(Picture)
+comment4.params=pic
+comment4.target=void\ sepiaTone(Picture)
+comment5.params=mypic
+comment5.target=void\ mirrorHorizontal(Picture)
+numComments=6
