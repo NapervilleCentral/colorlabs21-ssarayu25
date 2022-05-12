@@ -11,4 +11,6 @@ comment4.params=pic
 comment4.target=void\ sepiaTone(Picture)
 comment5.params=mypic
 comment5.target=void\ mirrorHorizontal(Picture)
-numComments=6
+comment6.params=pic\ x
+comment6.target=Picture\ recursive(Picture,\ int)
+numComments=7

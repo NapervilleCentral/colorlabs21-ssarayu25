@@ -13,8 +13,9 @@ public class filter
     public static void main  (String args [])
     {
         Picture pic = new Picture("images\\og.jpg");
-        mirrorHorizontal(pic);
-        pic.explore();
+        Picture apic = recursive(pic, 5);
+        //mirrorHorizontal(pic);
+        apic.explore();
     }
     
     public static void addBlue(Picture pic)
@@ -23,7 +24,7 @@ public class filter
           Pixel spot;
           int h = pic.getHeight() - 1;
           int w = pic.getWidth() - 1;
-            for (int r = 0; r < w; r++)
+          for (int r = 0; r < w; r++)
           {
               for (int c = 0; c < h; c++)
               {
@@ -97,6 +98,37 @@ public class filter
             }
         }
      }
+    
+    public static Picture recursive(Picture pic, int x)
+    {
+        if (x == 0)
+        {
+            return pic;
+        }
+        Picture copy = new Picture (pic);
+          int width; int height;
+          Pixel spot; Pixel spot1;
+          int h = pic.getHeight() - 1;
+          int w = pic.getWidth() - 1;
+          for (int r = w, r1 = w; r > 0; r--)
+          {
+              for (int c = h, c1 = h; c > 0; c--)
+              {
+                 if (c%2 == 0 )
+                 {
+                      spot = pic.getPixel(r, c);
+                      spot1 = copy.getPixel(r1, c1);
+                      spot1.setColor(spot.getColor());
+                      c1--;
+                   }
+                }
+              if (r%2 == 0)
+              {
+                  r1--;
+                }
+            }
+          return copy;
+    }
 }
 
     
