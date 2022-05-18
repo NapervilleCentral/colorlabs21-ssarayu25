@@ -13,21 +13,30 @@ C:\Program Files\BlueJ\jdk\bin\javadoc.exe
 -source
 11
 -classpath
-C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-4.11.jar;C:\Program Files\BlueJ\lib\hamcrest-core-1.3.jar;C:\Program Files\BlueJ\lib\lang-stride.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.base.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.controls.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.fxml.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.graphics.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.media.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.properties.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.swing.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.web.jar;C:\Users\ssuresh\Desktop\APCS\chapter7inheritancerepo-ssarayu25\GridWorldCode\gridworld.jar;C:\Users\ssuresh\Desktop\APCS\colorlabs21-ssarayu25\ColorLabs17\+libs\mediaComp.jar;C:\Users\ssuresh\Desktop\APCS\colorlabs21-ssarayu25\ColorLabs17
+C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-4.11.jar;C:\Program Files\BlueJ\lib\hamcrest-core-1.3.jar;C:\Program Files\BlueJ\lib\lang-stride.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.base.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.controls.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.fxml.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.graphics.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.media.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.properties.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.swing.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.web.jar;C:\Users\ssuresh\Desktop\APCS\chapter7inheritancerepo-ssarayu25\GridWorldCode\gridworld.jar;C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\+libs\mediaComp.jar;C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17
 -d
-C:\Users\ssuresh\Desktop\APCS\colorlabs21-ssarayu25\ColorLabs17\doc
+C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\doc
 -encoding
 UTF-8
 -charset
 UTF-8
-C:\Users\ssuresh\Desktop\APCS\colorlabs21-ssarayu25\ColorLabs17\bookClasses\Picture.java
+C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\poster.java
 <---- end of javadoc command ---->
-Loading source file C:\Users\ssuresh\Desktop\APCS\colorlabs21-ssarayu25\ColorLabs17\bookClasses\Picture.java...
+Loading source file C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\poster.java...
 Constructing Javadoc information...
-C:\Users\ssuresh\Desktop\APCS\colorlabs21-ssarayu25\ColorLabs17\bookClasses\SimplePicture.java:43: error: cannot access PictureFrame
-  private PictureFrame pictureFrame;
-          ^
-  bad source file: C:\Users\ssuresh\Desktop\APCS\colorlabs21-ssarayu25\ColorLabs17\bookClasses\PictureFrame.java
-    file does not contain class bookClasses.PictureFrame
-    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
-1 error
+Standard Doclet version 11.0.2
+Building tree for all the packages and classes...
+Generating C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\doc\poster.html...
+C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\poster.java:42: warning - @param argument "source" is not a parameter name.
+C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\poster.java:61: warning - @param argument "photo" is not a parameter name.
+C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\poster.java:81: warning - @param argument "photo" is not a parameter name.
+C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\poster.java:102: warning - @param argument "photo" is not a parameter name.
+C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\poster.java:131: warning - @param argument "photo" is not a parameter name.
+Generating C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\doc\package-summary.html...
+Generating C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\doc\constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\doc\allclasses.html...
+Generating C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\doc\allclasses.html...
+Generating C:\Users\ssuresh\Desktop\colorlabs21-ssarayu25\ColorLabs17\doc\index.html...
+5 warnings

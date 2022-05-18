@@ -11,8 +11,8 @@ public class poster
 {
     public static void main  (String args [])
     {
-        Picture blank = new Picture("images\\canvas.jpg");
-        Picture og = new Picture("images\\canvas.jpg");
+        Picture blank = new Picture("images\\canvas.png");
+        Picture og = new Picture("images\\og.jpg");
         Picture blue = new Picture("images\\og.jpg");
         Picture sepia = new Picture("images\\og.jpg");
         Picture mirror = new Picture("images\\og.jpg");
@@ -27,30 +27,39 @@ public class poster
         
         
         copyTo(og, blank, 0, 0);
-        copyTo(blue, sepia, 3376, 6000);
+        copyTo(blue, blank, 3376, 0);
+        copyTo(sepia, blank, 6752, 0);
+        copyTo(mirror, blank, 0, 6000);
+        copyTo(rainbow, blank, 3376, 6000);
+        copyTo(recursive1, blank, 6752, 6000);
         blank.explore();
         
+        blank.write("images\\poster.png");
         
     }
-    
-    public static void copyTo(Picture s, Picture t, int h1, int w1)
+    /**
+     * copies a photo to a different photo starting at specific coordinate
+     * @param source photo, target photo, int x and tnt y coordinate
+     */
+    public static void copyTo(Picture s, Picture t, int x, int y)
     {
-          int width; int height;
-          Pixel target;
-          Pixel source;
+          Pixel target; Pixel source;
           int h = s.getHeight() - 1;
           int w = s.getWidth() - 1;
-            for (int r = w1; r < w + w1; r++)
-          {
-              for (int c = h1; c < h + h1; c++)
+          for (int r = 0; r < w; r++)
+           {
+              for (int c = 0; c < h; c++)
               {
-                  target = t.getPixel(r, c);
+                  target = t.getPixel(r+x, c+y);
                   source = s.getPixel(r, c);
                   target.setColor(source.getColor());
                 }
             }
     }
-    
+    /**
+     * increases the blue value and decreases the red value of reach pixel 
+     * @param photo to edit
+     */
     public static void addBlue(Picture pic)
     {
           int width; int height;
@@ -67,7 +76,10 @@ public class poster
                 }
             }
     }
-    
+  /**
+   * changes a color photo to black an white by averaging rgb values
+   * @param photo to edit
+   */
     public static void grayScale(Picture pic)
     {
         
@@ -85,7 +97,10 @@ public class poster
         }   
         
     }
-    
+    /**
+     * changes a grayscale photo to sepia tones, by changing the r and b values of each pixel
+     * @param photo to edit
+     */
     public static void sepiaTone(Picture pic)
     {
        grayScale(pic);
@@ -109,29 +124,33 @@ public class poster
                apix.setRed((int) (r * 1.08));
                apix.setBlue((int) (r * 0.93));
             }
-           
-           
         }   
     }
-    
-    public static void mirrorHorizontal(Picture mypic)
+    /**
+     * horizontally mirror photo by copying the top half of photo to botton half
+     * @param photo to edit
+     */
+   public static void mirrorHorizontal(Picture mypic)
     {
       int width; int height;
       Pixel up;
       Pixel down;
       int h = mypic.getHeight() - 1;
       int w = mypic.getWidth() - 1;
-      for (int r = 0; r < w/2; r++)
+      for (int r = 0; r < w; r++)
       {
-          for (int c = 0; c < h; c++)
+          for (int c = 0; c < h/2; c++)
           {
               up = mypic.getPixel(r , c);
               down = mypic.getPixel (r, h - c );
               down.setColor(up.getColor());
             }
-        }
+       }
      }
-    
+    /**
+     * recursively copies the photo onto the bottom right of photo
+     * @param photo to edit
+     */
     public static Picture recursive(Picture pic, int x)
     {
          if (x == 0)
