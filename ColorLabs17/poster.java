@@ -2,10 +2,8 @@ import java.awt.*;
 import java.util.*;
 import java.util.List;
 /**
- * Write a description of class filter here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Sarayu Suresh
+ * @version 5/19/22
  */
 public class poster
 {
@@ -182,34 +180,10 @@ public class poster
             
           return recursive(copy, x-1);
     }
-    
-    public static void contrast(Picture pic)
-    {
-        Pixel[] markspixs = pic.getPixels();
-       
-       for (Pixel apix: markspixs)
-       {
-           int r = apix.getRed();
-           int g = apix.getGreen();
-           int b = apix.getBlue();
-           int avg = (r + b + g)/3;
-           if (avg < 125)
-           {
-              apix.setColor(new Color((int) (r * 0.8), (int) (g * 0.8), (int) (b * 0.8)));
-               }
-           else
-           {
-               if ((int)(r*1.2) < 255 && (int) (g * 1.2) < 255 && (int)(b * 1.2) < 255)
-               {
-                   apix.setColor(new Color((int) (r* 1.2), (int) (g* 1.2), (int) (b* 1.2)));
-                }
-               else
-               {
-                   apix.setColor(new Color(255, 255, 255));
-                }
-            }
-        }
-    }
+    /**
+     * shepard fairy. changes color to pastel red to purple rainbow color based on shade
+     * @param photo to edit
+     */
     public static void rainbow(Picture pic)
     {
         Pixel[] pixels = pic.getPixels();
@@ -234,6 +208,4 @@ public class poster
                spot.setColor(new Color(245,149,224));
         }
     }
-    
-    
 }

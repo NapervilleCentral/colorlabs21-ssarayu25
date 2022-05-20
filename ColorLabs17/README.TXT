@@ -1,12 +1,11 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
+Poster/Collage
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+6 photo poster, one orignial and 5 manipulations
+
+top left is original
+top middle has blue increased, and red lowered
+top right is sepia toned
+bottom left is vertical mirror
+bottom middle is pastel rainbow shepards fairy
+bottom right is recursiveely copied into bottom right
+
